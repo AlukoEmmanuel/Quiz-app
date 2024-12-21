@@ -1,0 +1,115 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #ff7f50);
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    overflow-x: hidden;
+}
+
+/* Centered container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    animation: slide-in 1.5s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Success Message */
+.success-message {
+    color: #2ecc71;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+/* Stars Animation */
+.stars {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.star {
+    font-size: 40px;
+    color: #f1c40f;
+    animation: pulse 1.5s infinite;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.8;
+    }
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #e74c3c, #8e44ad);
+    color: #ffffff;
+    text-transform: uppercase;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #8e44ad, #e74c3c);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
